@@ -5,16 +5,19 @@ interface Song {
     id: string
     title: string
     singer: string
+    rating: number
     lyrics: string
 }
 
 
 export default function SongList({ songs }: { songs: Song[] }) {
     return (
-        <>
-            {songs.map(song => (
-                <SongCard key={song.id} song={song} />
-            ))}
-        </>
+        <div className='p-6'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {songs.map(song => (
+                    <SongCard key={song.id} song={song} />
+                ))}
+            </div>
+        </div>
     )
 }
