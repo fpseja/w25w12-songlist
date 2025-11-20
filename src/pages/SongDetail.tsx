@@ -40,7 +40,7 @@ const SongDetail = ({ songs }: PropsSongs) => {
     }
 
     if (isError) {
-        return <p className="text-center mt-10">오류 발생: {error.message}</p>
+        return <p className="text-center mt-10">오류 발생 : {error.message}</p>
     }
 
     return (
