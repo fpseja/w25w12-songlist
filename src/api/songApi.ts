@@ -1,12 +1,5 @@
 import axios from 'axios'
-
-interface Song {
-    id: string
-    title: string
-    singer: string
-    rating: number
-    lyrics: string
-}
+import type { Song } from '../types/Song.ts'
 
 const api = axios.create({
     baseURL: 'http://localhost:8080/api/songs',

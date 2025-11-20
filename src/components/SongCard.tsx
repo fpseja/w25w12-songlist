@@ -1,16 +1,5 @@
 import { Link } from 'react-router-dom'
-
-interface Song {
-    id: string
-    title: string
-    singer: string
-    rating: number
-    lyrics: string
-}
-
-interface PropsSong {
-    song: Song;
-}
+import type { PropsSong } from '../types/Song.ts';
 
 export default function SongCard({ song }: PropsSong) {
     return (

@@ -6,6 +6,10 @@ export interface Song {
     lyrics: string
 }
 
-export interface PropsSong {
+export interface PropsSongs {
     songs: Song[];
+}
+
+export interface PropsSong {
+    song: Song;
 }

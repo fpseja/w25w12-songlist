@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import type { Song, PropsSong } from '../types/Song.ts';
+import type { Song, PropsSongs } from '../types/Song.ts';
 
 // TODO: 테스트 Only. 변경할 것
 const song = {
@@ -33,7 +33,7 @@ const renderRatingStars = (rating: Song["rating"], maxRating = 5) => {
     )
 }
 
-const SongDetail = ({ songs }: PropsSong) => {
+const SongDetail = ({ songs }: PropsSongs) => {
     const { id } = useParams();
 
     return (
