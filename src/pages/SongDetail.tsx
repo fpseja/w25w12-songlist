@@ -1,16 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-
-interface Song {
-    id: string
-    title: string
-    singer: string
-    rating: number
-    lyrics: string
-}
-
-interface PropsSong {
-    songs: Song[];
-}
+import type { Song, PropsSong } from '../types/Song.ts';
 
 // TODO: 테스트 Only. 변경할 것
 const song = {
