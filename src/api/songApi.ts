@@ -2,7 +2,7 @@ import axios from 'axios'
 import type { Song } from '../types/Song.ts'
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/api/songs',
+    baseURL: 'https://fpseja.github.io/w25w12-songlist/',
 })
 
 export const getSongList = async () => {
