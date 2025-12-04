@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { getSongDetail } from '../api/songApi.js'
-import type { Song } from '../types/Song.ts';
+import type { Song, PropsSongs } from '../types/Song.ts';
 
 const renderRatingStars = (rating: Song["rating"], maxRating = 5) => {
     const stars = []
@@ -26,7 +26,8 @@ const renderRatingStars = (rating: Song["rating"], maxRating = 5) => {
     )
 }
 
-const SongDetail = () => {
+const SongDetail = ({ songs }: PropsSongs) => {
+    songs;
     const { id } = useParams();
 
     const { data: song, isLoading, isError, error } = useQuery({
